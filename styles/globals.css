@@ -5,6 +5,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Inter";
+  height: 100%;
 }
 
 a {
@@ -36,11 +37,12 @@ a {
   --xl: 32px;
   --br: 6px;
 
+  /* font */
+
   /* colors */
-  --blue: #005493;
-  --yellow: #F5AA1C;
-  --red: #C63527;
-  --darkblue: #002754;
+  --black: #272727;
+  --blue: #3454D1;
+  --yellow: #FED766;
+  --red: #E84855;
   --white: #fff;
-  --black: #222;
 }
