@@ -9,11 +9,13 @@ const FlexContainer = styled.div`
 `;
 
 const NavItem = ({navLink}:{navLink: NavigationLink}) => {
-  <Link href={navLink.path}>
-    <FlexContainer>
-    {navLink.name}
-    </FlexContainer>
-  </Link>
-}
+  return (
+    <Link href={navLink.path}>
+      <FlexContainer>
+      {navLink.name}
+      </FlexContainer>
+    </Link>
+    );
+};
 
 export default NavItem;
