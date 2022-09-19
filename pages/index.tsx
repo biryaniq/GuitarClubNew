@@ -5,6 +5,10 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
+//components
+import NavItem from '../components/NavItem';
+import NavBar from "../components/NavBar";
+
 //styled components
 const FlexContainer = styled.div`
   display: flex;
