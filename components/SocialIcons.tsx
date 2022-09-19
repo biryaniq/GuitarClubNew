@@ -19,7 +19,9 @@ const SocialIcons = ({ socialIcons }: { socialIcons: SocialIcon[] }) => {
   return (
     <SocialIconRow>
       {socialIcons.map((socialIcon: SocialIcon) => (
-        <SocialIconLink href={socialIcon.url}>{socialIcon.icon}</SocialIconLink>
+        <SocialIconLink key={socialIcon.url} href={socialIcon.url}>
+          {socialIcon.icon}
+        </SocialIconLink>
       ))}
     </SocialIconRow>
   );

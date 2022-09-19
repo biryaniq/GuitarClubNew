@@ -8,9 +8,11 @@ const Shared = css`
   background-color: var(--blue);
   color: var(--white);
   cursor: pointer;
+  box-shadow: 2px 2px 3px rgb(0, 0, 0, 0.15);
   transition: 0.3s ease;
   :hover {
     filter: brightness(0.75) contrast(1.3);
+    box-shadow: 0 0 4px rgb(0, 0, 0, 0.4);
   }
 `;
 

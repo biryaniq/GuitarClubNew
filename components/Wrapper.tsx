@@ -6,6 +6,7 @@ import ugcLogo from "../public/Logo.jpg";
 import Image from "next/image";
 
 import { FaDiscord } from "react-icons/fa";
+import config from "../config/config";
 
 const Layout = styled.div`
   max-width: 1200px;
@@ -57,8 +58,8 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
     { name: "Sandbox", path: "/components" },
   ];
   const socialIcons: SocialIcon[] = [
-    { icon: <FaDiscord />, url: "https://google.com" },
-    { icon: <></>, url: "https://google.com" },
+    { icon: <FaDiscord />, url: `https://discord.gg/${config.discord_invite_code}` },
+    { icon: <></>, url: "https://googles.com" },
   ];
 
   return (
