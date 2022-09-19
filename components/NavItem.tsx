@@ -4,7 +4,7 @@ import Link from "next/link";
 import { NavigationLink } from "./NavBar";
 
 const FlexContainer = styled.div`
-  display: flex;
+  display: inline-flex;
   align-content: center;
 `;
 
