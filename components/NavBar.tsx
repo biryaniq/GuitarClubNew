@@ -7,7 +7,11 @@ export type NavigationLink = {
   path: string;
 };
 
-const NavRow = styled.div``;
+const NavRow = styled.div`
+  height: 100;
+  display: flex;
+  align-items: center;
+`;
 
 const NavBar = ({ navLinks }: { navLinks: NavigationLink[] }) => (
   <NavRow>

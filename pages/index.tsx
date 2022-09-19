@@ -6,7 +6,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 //components
-import NavItem from '../components/NavItem';
+import NavItem from "../components/NavItem";
 import NavBar from "../components/NavBar";
 
 //styled components

@@ -28,7 +28,7 @@ const Components = () => {
           <Button text="Default Button" />
           <Button size="lg" text="Large Button" />
         </Row>
-        <Row>Check the usage of these components in pages/components.tsx</Row>
+        <Row></Row>
       </Table>
     </Wrapper>
   );

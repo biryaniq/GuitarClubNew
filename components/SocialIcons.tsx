@@ -11,12 +11,15 @@ const SocialIconRow = styled.div`
   justify-content: center;
 `;
 
+const SocialIconLink = styled.a`
+  font-size: 30px;
+`;
+
 const SocialIcons = ({ socialIcons }: { socialIcons: SocialIcon[] }) => {
   return (
     <SocialIconRow>
       {socialIcons.map((socialIcon: SocialIcon) => (
-        // NavItem components go here
-        <span>SOCIAL_ICON</span>
+        <SocialIconLink href={socialIcon.url}>{socialIcon.icon}</SocialIconLink>
       ))}
     </SocialIconRow>
   );

@@ -2,9 +2,15 @@ import React from "react";
 import styled from "@emotion/styled";
 import NavBar, { NavigationLink } from "./NavBar";
 import SocialIcons, { SocialIcon } from "./SocialIcons";
+import ugcLogo from "../public/Logo.jpg";
+import Image from "next/image";
+
+import { FaDiscord } from "react-icons/fa";
 
 const Layout = styled.div`
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -25,7 +31,9 @@ const HeaderContent = styled.div`
   justify-content: space-between;
 `;
 
-const Logo = styled.img``;
+const Logo = styled.img`
+  max-height: 2.5em;
+`;
 
 const Footer = styled.div`
   display: flex;
@@ -49,15 +57,15 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
     { name: "Sandbox", path: "/components" },
   ];
   const socialIcons: SocialIcon[] = [
-    { icon: <></>, url: "google.com" },
-    { icon: <></>, url: "google.com" },
+    { icon: <FaDiscord />, url: "https://google.com" },
+    { icon: <></>, url: "https://google.com" },
   ];
 
   return (
     <Layout>
       <Header>
         <HeaderContent>
-          <Logo src="#" />
+          <Logo src="/Logo.jpg" />
           <NavBar navLinks={navLinks} />
         </HeaderContent>
       </Header>
