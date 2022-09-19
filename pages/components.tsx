@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import styled from "@emotion/styled";
 import Wrapper from "../components/Wrapper";
 import DiscordInvite from "../components/DiscordInvite";
+import GuitarPlaySVG from "../components/GuitarPlaySVG";
 
 const Table = styled.div`
   padding: 2em;
@@ -31,6 +32,9 @@ const Components = () => {
         </Row>
         <Row>
           <DiscordInvite />
+        </Row>
+        <Row>
+          <GuitarPlaySVG />
         </Row>
       </Table>
     </Wrapper>
