@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from "react";
+import styled from "@emotion/styled";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -18,7 +18,6 @@ const Container = styled.div`
   height: 100%;
 `;
 
-
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -29,7 +28,6 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        TEST
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -68,29 +66,18 @@ const Home: NextPage = () => {
             <a href="https://www.long-mcquade.com/">
               Sponsored by{" "}
               <span className={styles.logo}>
-                <Image
-                  src="/l&mlogo.jpg"
-                  alt="Long & McQuade Logo"
-                  width={150}
-                  height={30}
-                />
+                <Image src="/l&mlogo.jpg" alt="Long & McQuade Logo" width={150} height={30} />
               </span>
             </a>
           </div>
 
           <a href="https://uvss.ca/">
             <span className={styles.logo}>
-              <Image
-                src="/UVSS-logo.jpg"
-                alt="UVSS Logo"
-                width={85}
-                height={50}
-              />
+              <Image src="/UVSS-logo.jpg" alt="UVSS Logo" width={85} height={50} />
             </span>
           </a>
         </FlexContainer>
       </footer>
-
     </div>
   );
 };
