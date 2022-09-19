@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
+import NavItem from "./NavItem";
 
 export type NavigationLink = {
   name: string;
@@ -8,15 +9,12 @@ export type NavigationLink = {
 
 const NavRow = styled.div``;
 
-const NavBar = ({ navLinks }: { navLinks: NavigationLink[] }) => {
-  return (
-    <NavRow>
-      {navLinks.map((navLink: NavigationLink) => (
-        // NavItem components go here
-        <span>PLACEHOLDER</span>
-      ))}
-    </NavRow>
-  );
-};
+const NavBar = ({ navLinks }: { navLinks: NavigationLink[] }) => (
+  <NavRow>
+    {navLinks.map((navLink: NavigationLink) => (
+      <NavItem navLink={navLink} />
+    ))}
+  </NavRow>
+);
 
 export default NavBar;

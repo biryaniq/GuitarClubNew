@@ -46,7 +46,7 @@ const Sponsors = styled.div`
 const Wrapper = ({ children }: { children: React.ReactNode }) => {
   const navLinks: NavigationLink[] = [
     { name: "Home", path: "/" },
-    { name: "Home", path: "/" },
+    { name: "Sandbox", path: "/components" },
   ];
   const socialIcons: SocialIcon[] = [
     { icon: <></>, url: "google.com" },

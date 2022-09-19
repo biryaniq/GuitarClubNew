@@ -8,12 +8,10 @@ const FlexContainer = styled.div`
   align-content: center;
 `;
 
-const NavItem = ({navLink}:{navLink: NavigationLink}) => {
+const NavItem = ({ navLink }: { navLink: NavigationLink }) => (
   <Link href={navLink.path}>
-    <FlexContainer>
-    {navLink.name}
-    </FlexContainer>
+    <FlexContainer>{navLink.name}</FlexContainer>
   </Link>
-}
+);
 
 export default NavItem;
