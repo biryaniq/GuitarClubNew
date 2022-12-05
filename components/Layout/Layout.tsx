@@ -1,8 +1,8 @@
 import { createStyles } from '@mantine/core';
 import Head from 'next/head';
 import React from 'react';
-import { FooterLinks } from './Footer';
-import { HeaderMegaMenu } from './Header';
+import { FooterSocial } from './Footer';
+import { HeaderResponsive } from './Header';
 
 type LayoutProps = {
   title?: string;
@@ -23,7 +23,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    height: '100vh',
+    minHeight: '100vh',
   },
 }));
 
@@ -60,12 +60,20 @@ const Layout = ({
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
-      <header>
-        <HeaderMegaMenu />
-      </header>
-      <main>{children}</main>
+      <div>
+        <header>
+          <HeaderResponsive
+            links={[
+              { label: 'About', link: '/' },
+              { label: 'Rentals', link: '/rentals' },
+              { label: 'Contact', link: '/contact' },
+            ]}
+          />
+        </header>
+        <main>{children}</main>
+      </div>
       <footer>
-        <FooterLinks data={footerLinks} />
+        <FooterSocial />
       </footer>
     </div>
   );
