@@ -8,7 +8,7 @@ interface Config {
  */
 const config: Config = {
   discord_invite_code: '2nBDKJkVUS',
-  schedule: 'COR B123, 6:12PM - 9:02PM',
+  schedule: 'COR B112',
 };
 
 export default config;

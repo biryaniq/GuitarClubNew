@@ -14,7 +14,7 @@ export default function HomePage() {
       <PageHero />
       <FeaturesGrid
         title="What we do here"
-        description="What do we do here? Why do we exist? Where are we located? Find out on the next episode of Dragon Ball Z!"
+        description="Our club's mission is to provide a place for all members of the UVic community to connect, jam, and learn."
       />
     </Layout>
   );
