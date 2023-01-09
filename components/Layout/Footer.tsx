@@ -43,11 +43,14 @@ export function FooterSocial() {
             <IconBrandDiscord size={18} stroke={1.5} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <IconBrandYoutube size={18} stroke={1.5} />
+            <Link href="https://www.youtube.com/channel/UCbp-x-ho233i2EwTiXD5P_g">
+             <IconBrandYoutube size={18} stroke={1.5} />
+            </Link>
           </ActionIcon>
           <ActionIcon size="lg">
-            <IconBrandInstagram size={18} stroke={1.5} href="https://www.instagram.com/uvicguitarofficial/" />
-            {/* <Link  /> */}
+            <Link href="https://www.instagram.com/uvicguitarofficial/">
+              <IconBrandInstagram size={18} stroke={1.5} />
+            </Link>
           </ActionIcon>
         </Group>
       </Container>
