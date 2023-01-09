@@ -1,12 +1,12 @@
 import { css } from '@emotion/react';
 import { Title, Text, Container, Button, Overlay, createStyles } from '@mantine/core';
-import DiscordInvite from '../Elements/DiscordInvite';
 import styled from '@emotion/styled';
 import { DiscordButton } from './DiscordButton';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import config from '../../config/changeables';
 import Link from 'next/link';
+import DiscordInvite from '../Elements/DiscordInvite';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -211,8 +211,7 @@ export function PageHero() {
 
         <Container size={640}>
           <Text size="lg" className={classes.description}>
-            Learn to play guitar. Do something. Jam with us. Someone please make this text sound
-            not-so-dead.
+            Connect, learn, and jam!
           </Text>
           <Text mt="lg" size="lg" className={classes.schedule}>
             {config.schedule}
@@ -222,11 +221,11 @@ export function PageHero() {
         <div className={classes.controls}>
           <ServerApi>
             <span>
-              <OnlineCount></OnlineCount>
+              <OnlineCount />
               {serverData ? serverData.approximate_presence_count : '?'} Online
             </span>
             <span>
-              <MemberCount></MemberCount>
+              <MemberCount />
               {serverData ? serverData.approximate_member_count : '?'} Members
             </span>
             <Link href={`https://discord.gg/${config.discord_invite_code}`}>

@@ -13,7 +13,7 @@ export default function HomePage() {
       {/* <div>hi</div> */}
       <PageHero />
       <FeaturesGrid
-        title="What we do here"
+        title="What we do"
         description="Our club's mission is to provide a place for all members of the UVic community to connect, jam, and learn."
       />
     </Layout>

@@ -3,6 +3,7 @@ import { createStyles, Header, Container, Group, Burger, Paper, Transition } fro
 import { useDisclosure } from '@mantine/hooks';
 import { DiscordButton } from './DiscordButton';
 import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
+import Image from 'next/image';
 
 const HEADER_HEIGHT = 60;
 
@@ -102,7 +103,9 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
-        <div>LOGO</div>
+        <div>
+          <Image src="/Logo.jpg" alt='Guitar Club Logo' width={60} height={30} />
+        </div>
         <Group spacing={5} className={classes.links}>
           {items}
           <ColorSchemeToggle />

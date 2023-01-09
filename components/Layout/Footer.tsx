@@ -1,5 +1,7 @@
 import { createStyles, Container, Group, ActionIcon } from '@mantine/core';
 import { IconBrandDiscord, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -33,7 +35,9 @@ export function FooterSocial() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <div>LOGO</div>
+        <div>
+          <Image src="/Logo.jpg" alt='Guitar Club Logo' width={60} height={30} />
+        </div>
         <Group spacing={0} className={classes.links} position="right" noWrap>
           <ActionIcon size="lg">
             <IconBrandDiscord size={18} stroke={1.5} />
@@ -42,7 +46,8 @@ export function FooterSocial() {
             <IconBrandYoutube size={18} stroke={1.5} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <IconBrandInstagram size={18} stroke={1.5} />
+            <IconBrandInstagram size={18} stroke={1.5} href="https://www.instagram.com/uvicguitarofficial/" />
+            {/* <Link  /> */}
           </ActionIcon>
         </Group>
       </Container>
