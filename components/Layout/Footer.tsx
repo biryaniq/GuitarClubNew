@@ -36,7 +36,7 @@ export function FooterSocial() {
     <div className={classes.footer}>
       <Container className={classes.inner}>
         <div>
-          <Image src="/Logo.jpg" alt='Guitar Club Logo' width={60} height={30} />
+          <Image src="/UGCLogo.png" alt='Guitar Club Logo' width="60" height="30" />
         </div>
         <Group spacing={0} className={classes.links} position="right" noWrap>
           <ActionIcon size="lg">

@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import config from '../../config/changeables';
 import Link from 'next/link';
+import Image from 'next/image';
 import DiscordInvite from '../Elements/DiscordInvite';
 
 const useStyles = createStyles((theme) => ({
@@ -13,8 +14,7 @@ const useStyles = createStyles((theme) => ({
     position: 'relative',
     paddingTop: 150,
     paddingBottom: 150,
-    backgroundImage:
-      'url(https://images.unsplash.com/photo-1573164713988-8665fc963095?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=980&q=80)',
+    backgroundImage: '/guitar_club_website_background',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
 

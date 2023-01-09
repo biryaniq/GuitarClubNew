@@ -104,7 +104,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
         <div>
-          <Image src="/Logo.jpg" alt='Guitar Club Logo' width={60} height={30} />
+          <Image src="/UGCLogo.png" alt='Guitar Club Logo' width={60} height={30} />
         </div>
         <Group spacing={5} className={classes.links}>
           {items}

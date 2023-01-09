@@ -11,34 +11,41 @@ import { IconGauge, IconCookie, IconUser, IconMessage2, IconLock, TablerIcon } f
 
 export const MOCKDATA = [
   {
-    icon: IconGauge,
-    title: 'Free Guitar Lessons',
-    description:
-      'New to guitar and want to learn? We offer group lessons throughout the school year! We also will have small focused lessons on specific techniques and styles for more advanced players.',
-  },
-  {
     icon: IconUser,
     title: 'Weekly Jam Sessions',
     description:
-      'Every week we host in-person jam sessions. Members will have the opportunity to play music with each other.',
+      "Every week we host in-person jam sessions on campus. Members will have the opportunity to meet up and play music together. These make up the majority of the club's regularly scheduled meetings.",
+  },
+  {
+    icon: IconGauge,
+    title: 'Guitar Lessons',
+    description:
+      'New to guitar and want to learn? We offer group lessons throughout the school year! We also have small focused lessons on specific techniques and styles for intermediate players.',
+  },
+
+  {
+    icon: IconLock,
+    title: 'Free Equipment Rental',
+    description:
+      'If you need to borrow a guitar, we have you covered. The club provides spare acoustic and classical guitars which are available for anyone in the club to use!',
   },
   {
     icon: IconCookie,
     title: 'Live Performance Opportunities',
     description:
-      'Throughout the year, club members have the opportunity',
-  },
-  {
-    icon: IconLock,
-    title: 'Free Equipment Rental',
-    description:
-      'If you need to borrow a guitar, we have you covered. The club has spare acoustic and classical guitars that are available for anyone to use!',
+      'We constantly seek out small venues for our members to perform at. Currently we are partnered with the Cridge Center for the Family for concerts.',
   },
   {
     icon: IconMessage2,
     title: 'Contests and Events',
     description:
-      'Throughout the year the Guitar Club will host small events for members to partake in.',
+      'Throughout the year the Guitar Club hosts small contests and get-togethers for members to partake in.',
+  },
+  {
+    icon: IconGauge,
+    title: 'Volunteering Opportunities',
+    description:
+      "Want to help run the club and gain experience? We'd love to have you join our team!",
   },
 ];
 

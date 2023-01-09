@@ -14,7 +14,7 @@ export default function HomePage() {
       <PageHero />
       <FeaturesGrid
         title="What we do"
-        description="Our club's mission is to provide a place for all members of the UVic community to connect, jam, and learn."
+        description="Our club's mission is to provide an accessible place for all members of the UVic community to play the world's best instrument!"
       />
     </Layout>
   );
