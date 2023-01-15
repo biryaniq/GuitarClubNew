@@ -1,12 +1,12 @@
 import { css } from '@emotion/react';
 import { Title, Text, Container, Button, Overlay, createStyles } from '@mantine/core';
 import styled from '@emotion/styled';
-import { DiscordButton } from './DiscordButton';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import config from '../../config/changeables';
 import Link from 'next/link';
 import Image from 'next/image';
+import config from '../../config/changeables';
+import { DiscordButton } from './DiscordButton';
 import DiscordInvite from '../Elements/DiscordInvite';
 
 const useStyles = createStyles((theme) => ({
@@ -42,7 +42,7 @@ const useStyles = createStyles((theme) => ({
 
     '@media (max-width: 520px)': {
       fontSize: 28,
-      textAlign: 'left',
+      // textAlign: 'left',
     },
   },
 
@@ -56,7 +56,7 @@ const useStyles = createStyles((theme) => ({
 
     '@media (max-width: 520px)': {
       fontSize: theme.fontSizes.md,
-      textAlign: 'left',
+      // textAlign: 'left',
     },
   },
 
@@ -67,8 +67,8 @@ const useStyles = createStyles((theme) => ({
     textAlign: 'center',
 
     '@media (max-width: 520px)': {
-      fontSize: theme.fontSizes.md,
-      textAlign: 'left',
+      fontSize: theme.fontSizes.lg,
+      // textAlign: 'left',
     },
   },
 
@@ -187,16 +187,16 @@ export function PageHero() {
   const { classes, cx } = useStyles();
   const [serverData, setServerData] = useState<ServerDataResponse>();
 
-  useEffect(() => {
-    const getInviteData = async () => {
-      const response = await axios({
-        method: 'get',
-        url: `https://discord.com/api/v9/invites/${config.discord_invite_code}?with_counts=true&with_expiration=true`,
-      });
-      setServerData(response.data);
-    };
-    getInviteData();
-  }, []);
+  // useEffect(() => {
+  //   const getInviteData = async () => {
+  //     const response = await axios({
+  //       method: 'get',
+  //       url: `https://discord.com/api/v9/invites/${config.discord_invite_code}?with_counts=true&with_expiration=true`,
+  //     });
+  //     setServerData(response.data);
+  //   };
+  //   getInviteData();
+  // }, []);
   return (
     <div className={classes.wrapper}>
       <Overlay color="#000" opacity={0.65} zIndex={1} />
@@ -219,19 +219,19 @@ export function PageHero() {
         </Container>
 
         <div className={classes.controls}>
-          <ServerApi>
-            <span>
+          {/* <ServerApi> */}
+          {/* <span>
               <OnlineCount />
               {serverData ? serverData.approximate_presence_count : '?'} Online
             </span>
             <span>
               <MemberCount />
               {serverData ? serverData.approximate_member_count : '?'} Members
-            </span>
-            <Link href={`https://discord.gg/${config.discord_invite_code}`}>
-              <DiscordButton>Join our Discord Server</DiscordButton>
-            </Link>
-          </ServerApi>
+            </span> */}
+          <Link href={`https://discord.gg/${config.discord_invite_code}`} passHref>
+            <DiscordButton>Join our Discord</DiscordButton>
+          </Link>
+          {/* </ServerApi> */}
         </div>
       </div>
     </div>
