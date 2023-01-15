@@ -14,7 +14,7 @@ const useStyles = createStyles((theme) => ({
     position: 'relative',
     paddingTop: 150,
     paddingBottom: 150,
-    backgroundImage: '/guitar_club_website_background',
+    backgroundImage: 'url(/guitar_club_website_background.png)',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
 

@@ -7,30 +7,30 @@ import {
   useMantineTheme,
   createStyles,
 } from '@mantine/core';
-import { IconGauge, IconCookie, IconUser, IconMessage2, IconLock, TablerIcon } from '@tabler/icons';
+import { IconGauge, IconCookie, IconUser, IconMessage2, IconLock, TablerIcon, IconGuitarPick, IconMusic, IconActivityHeartbeat, IconMicrophone2, IconVinyl } from '@tabler/icons';
 
 export const MOCKDATA = [
   {
-    icon: IconUser,
+    icon: IconGuitarPick,
     title: 'Weekly Jam Sessions',
     description:
       "Every week we host in-person jam sessions on campus. Members will have the opportunity to meet up and play music together. These make up the majority of the club's regularly scheduled meetings.",
   },
   {
-    icon: IconGauge,
+    icon: IconMusic,
     title: 'Guitar Lessons',
     description:
       'New to guitar and want to learn? We offer group lessons throughout the school year! We also have small focused lessons on specific techniques and styles for intermediate players.',
   },
 
   {
-    icon: IconLock,
+    icon: IconVinyl,
     title: 'Free Equipment Rental',
     description:
       'If you need to borrow a guitar, we have you covered. The club provides spare acoustic and classical guitars which are available for anyone in the club to use!',
   },
   {
-    icon: IconCookie,
+    icon: IconMicrophone2,
     title: 'Live Performance Opportunities',
     description:
       'We constantly seek out small venues for our members to perform at. Currently we are partnered with the Cridge Center for the Family for concerts.',
@@ -42,7 +42,7 @@ export const MOCKDATA = [
       'Throughout the year the Guitar Club hosts small contests and get-togethers for members to partake in.',
   },
   {
-    icon: IconGauge,
+    icon: IconActivityHeartbeat,
     title: 'Volunteering Opportunities',
     description:
       "Want to help run the club and gain experience? We'd love to have you join our team!",
