@@ -7,7 +7,7 @@ export function DiscordButton(props: ButtonProps) {
       leftIcon={<DiscordIcon size={24} />}
       size="lg"
       sx={(theme) => ({
-        padding: '16px',
+        paddingRight: '20px',
         backgroundColor: theme.colorScheme === 'dark' ? '#5865F2' : '#5865F2',
         '&:hover': {
           backgroundColor:
@@ -15,7 +15,7 @@ export function DiscordButton(props: ButtonProps) {
               ? theme.fn.lighten('#5865F2', 0.05)
               : theme.fn.darken('#5865F2', 0.05),
         },
-        fontSize: '20px',
+        fontSize: '18px',
       })}
       {...props}
     />

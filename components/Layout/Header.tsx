@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { createStyles, Header, Container, Group, Burger, Paper, Transition } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import Image from 'next/image';
+import Link from 'next/link';
 import { DiscordButton } from './DiscordButton';
 import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
-import Image from 'next/image';
+import config from '../../config/changeables';
 
 const HEADER_HEIGHT = 60;
 
@@ -104,14 +106,15 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
         <div>
-          <Image src="/UGCLogo.png" alt='Guitar Club Logo' width={60} height={30} />
+          <Image src="/UGCLogo.png" alt="Guitar Club Logo" width={60} height={30} />
         </div>
         <Group spacing={5} className={classes.links}>
-          {items}
+          {/* {items} */}
           <ColorSchemeToggle />
+          {/* <Link href={`https://discord.gg/${config.discord_invite_code}`} passHref>
+            <DiscordButton>Join our Discord Server</DiscordButton>
+          </Link> */}
         </Group>
-
-        {/* <DiscordButton className={classes.discordButton}>Join our Discord</DiscordButton> */}
 
         <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
 
