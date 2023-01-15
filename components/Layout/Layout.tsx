@@ -30,7 +30,7 @@ const useStyles = createStyles((theme) => ({
 const Layout = ({
   title = 'UVic Guitar Club',
   description = "Welcome to the University of Victoria's Guitar Club!",
-  icon = '/favicon.svg',
+  icon = '/UGCfavicon.png',
   children,
 }: LayoutProps) => {
   const { classes } = useStyles();
@@ -58,7 +58,7 @@ const Layout = ({
       <Head>
         <title>UVic Guitar Club</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/UGCfavicon.png" />
       </Head>
       <div>
         <header>
