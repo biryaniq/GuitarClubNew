@@ -1,30 +1,31 @@
-import { css } from "@emotion/react";
-import styled from "@emotion/styled";
-import axios from "axios";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import { FaDiscord } from "react-icons/fa";
-import config from "../config/config";
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+import axios from 'axios';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import { DiscordIcon } from '@mantine/ds';
+import config from '../../config/changeables';
 
 const DiscordImitationRoot = styled.div`
-  border-radius: var(--br);
+  display: block;
+  border-radius: 4px;
   box-shadow: 2px 2px 3px rgb(0, 0, 0, 0.15);
 `;
 
 const DiscordImitationHeader = styled.div`
   padding: 0.5em 1em;
-  border-radius: var(--br) var(--br) 0 0;
-  background-color: var(--blue);
-  color: var(--white);
+  border-radius: 4px 4px 0 0;
+  background-color: #5865f2;
+  color: white;
   font-weight: 600;
   letter-spacing: 0.2px;
 `;
 
 const DiscordImitationEmbed = styled.div`
   padding: 1em;
-  border-radius: 0 0 var(--br) var(--br);
+  border-radius: 0 0 4px 4px;
   background-color: #f2f3f5;
-  color: var(--black);
+  color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,11 +35,11 @@ const DiscordImitationEmbed = styled.div`
 const ServerIcon = styled.div`
   height: 42px;
   width: 42px;
-  border-radius: var(--md);
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--white);
+  background-color: white;
 `;
 
 const ServerInfo = styled.div`
@@ -79,10 +80,10 @@ const InviteButton = styled.button`
   background-color: #3ba55d;
   border: 0;
   border-radius: 4px;
-  padding: calc(1.5 * var(--sm)) var(--md);
-  font-size: var(--md);
+  padding: calc(1.5 * 8px) 16px;
+  font-size: 18px;
   font-weight: 500;
-  color: var(--white);
+  color: white;
   cursor: pointer;
   transition: 0.25s ease;
   :hover {
@@ -90,7 +91,7 @@ const InviteButton = styled.button`
   }
 `;
 
-const FixFaDiscord = styled(FaDiscord)`
+const FixDiscordIcon = styled(DiscordIcon)`
   font-size: 22px;
   margin-bottom: -5px;
   margin-right: 6px;
@@ -132,7 +133,7 @@ const DiscordInvite = () => {
   useEffect(() => {
     const getInviteData = async () => {
       const response = await axios({
-        method: "get",
+        method: 'get',
         url: `https://discord.com/api/v9/invites/${config.discord_invite_code}?with_counts=true&with_expiration=true`,
       });
       setServerData(response.data);
@@ -143,23 +144,23 @@ const DiscordInvite = () => {
   return (
     <DiscordImitationRoot>
       <DiscordImitationHeader>
-        <FixFaDiscord />
+        <FixDiscordIcon size={22} />
         JOIN OUR DISCORD SERVER
       </DiscordImitationHeader>
       <DiscordImitationEmbed>
         <ServerIcon>
-          <Image src="/Logo.jpg" width={34} height={20} />
+          <Image alt="discord icon" src="/Logo.jpg" width={34} height={20} />
         </ServerIcon>
         <ServerInfo>
           <h3>UVic Guitar Club</h3>
           <ServerApi>
             <span>
               <OnlineCount></OnlineCount>
-              {serverData ? serverData.approximate_presence_count : "?"} Online
+              {serverData ? serverData.approximate_presence_count : '?'} Online
             </span>
             <span>
               <MemberCount></MemberCount>
-              {serverData ? serverData.approximate_member_count : "?"} Members
+              {serverData ? serverData.approximate_member_count : '?'} Members
             </span>
           </ServerApi>
         </ServerInfo>
